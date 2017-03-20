@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="iv_back" type="id" />
+    <item name="tv_right" type="id" />
+    <item name="tv_not" type="id" />
+    <item name="image_id" type="id" />
+    <item name="tv_id" type="id" />
+    <item name="tv_left" type="id" />
+    <item name="tv_title" type="id" />
+</resources>

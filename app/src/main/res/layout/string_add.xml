@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="2个字符串拼接" />
+
+    <EditText
+        android:id="@+id/etStr1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入第一个字符串"
+        />
+    <EditText
+        android:id="@+id/etStr2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入第二个字符串"
+        />
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="拼接字符串"
+        android:gravity="center"
+        />
+</LinearLayout>

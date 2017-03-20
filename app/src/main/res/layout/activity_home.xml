@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <RadioGroup
+        android:id="@+id/tabcontainer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="#c1cdd8"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/tabhome"
+            style="@style/tabstyle"
+            android:drawablePadding="@dimen/padding_tab_bottom_drawable"
+            android:drawableTop="@drawable/tab_item_home_selector"
+            android:text="@string/tab_item_home"
+            android:textSize="@dimen/font_size_tab_item" />
+
+
+        <RadioButton
+            android:id="@+id/tabCategory"
+            style="@style/tabstyle"
+            android:drawableTop="@drawable/tab_item_category_selector"
+            android:text="@string/tab_item_category"
+            android:textSize="@dimen/font_size_tab_item"
+            />
+
+        <RadioButton
+            android:id="@+id/tab_shopcart"
+            style="@style/tabstyle"
+            android:text="@string/tab_item_shopcart"
+            android:drawableTop="@drawable/tab_item_shopcart_selector"
+            android:drawablePadding="@dimen/padding_tab_bottom_drawable"
+            android:textSize="@dimen/font_size_tab_item"
+            />
+        <RadioButton
+            android:id="@+id/tabme"
+            style="@style/tabstyle"
+            android:drawableTop="@drawable/tab_item_mine_selector"
+            android:text="@string/tab_item_me"
+            android:textSize="@dimen/font_size_tab_item" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/mContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tabcontainer">
+    </FrameLayout>
+
+
+</RelativeLayout>

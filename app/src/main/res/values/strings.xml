@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">装逼商城</string>
+    <string name="sendReceiver">发送广播</string>
+    <string name="btnStatAct">进入主页面</string>
+    <string name="etHintContent">请输入你要发送的广播内容</string>
+    <string name="tvNomoreData">没有更多的数据了</string>
+
+    <string name="tab_item_home">商城</string>
+    <string name="tab_item_product">商城</string>
+    <string name="tab_item_category">分类</string>
+    <string name="tab_item_shopcart">购物车</string>
+    <string name="tab_item_me">我的</string>
+
+
+    <string name="text_item_category">分类</string>
+    <string name="text_item_shopcatd">购物车</string>
+    <string name="text_item_order">订单</string>
+    <string name="text_item_coupon">优惠券</string>
+
+    <string name="scan">扫一扫</string>
+    <string name="person_goods_collect">我的收藏</string>
+    <string name="http_net_toast">当前没有网络，请检查网络！</string>
+    <string name="payTitle">选择支付方式</string>
+    <string name="addPerson">收藏成功</string>
+    <string name="tvReallyAdd">已收藏</string>
+    <string name="btnMore">更多</string>
+    <string name="btnApprase">评价</string>
+    <string name="btnFridendsPay">朋友代付</string>
+    <string name="btnCancel">取消订单</string>
+</resources>

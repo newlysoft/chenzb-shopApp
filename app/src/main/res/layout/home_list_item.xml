@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal|center_vertical"
+    android:orientation="vertical"
+    android:background="@color/bg_view">
+
+	<TextView
+		android:id="@+id/tvTitle"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textSize="@dimen/sp_18"
+		android:textColor="@android:color/background_dark"
+		android:text="标题"
+		/>
+    <android.support.v7.widget.RecyclerView
+		android:id="@+id/mRecyclerView"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		>
+
+	</android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

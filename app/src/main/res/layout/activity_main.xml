@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.myreceiverdemo.com.example.administrator.myapp.MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/llAdvertiseBoard"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:orientation="vertical">
+
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llAdvertiseBoard"
+        android:hint="@string/etHintContent" />
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etContent"
+        android:text="@string/sendReceiver" />
+
+    <Button
+        android:id="@+id/btnStartAct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnSend"
+        android:text="@string/btnStatAct" />
+
+    <Button
+        android:id="@+id/btnHttpAct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnStartAct"
+        android:text="进入FragmentTabHost的界面" />
+
+    <Button
+        android:id="@+id/btnOneKeyShare"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnHttpAct"
+        android:gravity="center"
+        android:text="一键分享功能" />
+    <!--圆形图片-->
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/mRoundImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btnOneKeyShare"
+        android:src="@mipmap/ic_launcher" />
+
+    <com.example.administrator.myapp.utils.RoundImageView
+        android:id="@+id/mImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</RelativeLayout>

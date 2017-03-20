@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_selector"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.administrator.myapp.ui.SelectorActivity">
+
+
+    <Button
+        android:id="@+id/btnSelector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="点击改变颜色"
+        android:textColor="@color/texttestcolor"
+        />
+    <TextView
+        android:id="@+id/tvSelector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="点击改变颜色"
+        android:textColor="@color/texttestcolor"
+        android:layout_below="@id/btnSelector"
+        android:clickable="true"
+        />
+
+
+    <ImageButton
+        android:id="@+id/ibImg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSelector"
+        android:scaleType="fitXY"
+        android:src="@mipmap/play1"
+        />
+</RelativeLayout>
