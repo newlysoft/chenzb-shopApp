@@ -147,6 +147,7 @@ public class CategoryFragment extends BaseFragment {
     private void initRightListView() {
         mLinearLayoutManager=new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false);
         mRightRecyclerView.setLayoutFrozen(true);
+        mRightRecyclerView.setHasFixedSize(true);
         mRightRecyclerView.setLayoutManager(mLinearLayoutManager);
         mContentAdapter = new CategoryRightContentAdapter(context);
         mRightRecyclerView.addItemDecoration(new RecycleViewDivider(context,OrientationHelper.VERTICAL));

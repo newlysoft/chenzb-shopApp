@@ -84,6 +84,7 @@
         <activity android:name=".ui.CategoryItemActivity" />
         <activity android:name=".ui.ProductFormatActivity" />
 
+
         <receiver
             android:name=".receiver.UserLoginReceiver"
             android:enabled="true"

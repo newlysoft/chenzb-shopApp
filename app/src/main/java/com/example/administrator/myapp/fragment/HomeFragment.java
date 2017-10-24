@@ -327,14 +327,14 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
                 //切换到category布局
                 if (context instanceof HomeActivity) {
                     HomeActivity mHomeActivity = (HomeActivity) context;
-                    mHomeActivity.showF(new CategoryFragment());
+                    mHomeActivity.showFrag(new CategoryFragment());
                     mHomeActivity.mTabs.check(R.id.tabCategory);
                 }
                 break;
             case R.id.home_menu_shopcart_layout://购物车的点击事件
                 if (context instanceof HomeActivity) {
                     HomeActivity mHomeActivity = (HomeActivity) context;
-                    mHomeActivity.showF(new ShopCartFragment());
+                    mHomeActivity.showFrag(new ShopCartFragment());
                     mHomeActivity.mTabs.check(R.id.tab_shopcart);
                 }
 
@@ -445,7 +445,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         public void onLocationChanged(AMapLocation amapLocation) {
             if (amapLocation != null) {
                 if (amapLocation.getErrorCode() == 0) {
-//可在其中解析amapLocation获取相应内容。
+                    //可在其中解析amapLocation获取相应内容。
                     amapLocation.getLocationType();//获取当前定位结果来源，如网络定位结果，详见定位类型表
                     amapLocation.getLatitude();//获取纬度
                     amapLocation.getLongitude();//获取经度

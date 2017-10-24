@@ -8,7 +8,6 @@ import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TabWidget;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.administrator.myapp.R;
 import com.example.administrator.myapp.base.BaseActivity;
@@ -18,7 +17,7 @@ import com.example.administrator.myapp.fragment.FragmentSecond;
 import com.example.administrator.myapp.fragment.FragmentThird;
 
 /**
- * 界面
+ * FragmentTabHost界面
  */
 public class HnActivity extends BaseActivity {
 
@@ -47,13 +46,13 @@ public class HnActivity extends BaseActivity {
         fragmentTabHost= (FragmentTabHost) findViewById(android.R.id.tabhost);
         fragmentTabHost.setup(this,getSupportFragmentManager(),android.R.id.tabcontent);
         for (int i=0;i<fragments.length;i++){
-            View view=getLayoutInflater().inflate(R.layout.tab_layout,null,false);
-            ImageView imageView= (ImageView) view.findViewById(R.id.tab_icon);
-            TextView tab_tag= (TextView) view.findViewById(R.id.tab_tag);
+            View tabView=getLayoutInflater().inflate(R.layout.tab_layout,null,false);
+            ImageView imageView= (ImageView) tabView.findViewById(R.id.tab_icon);
+            TextView tab_tag= (TextView) tabView.findViewById(R.id.tab_tag);
             imageView.setImageResource(resIds[i]);
             tab_tag.setText(tags[i]);
             TabHost.TabSpec tabSpec=fragmentTabHost.newTabSpec(tags[i]);
-            tabSpec.setIndicator(view);
+            tabSpec.setIndicator(tabView);
             fragmentTabHost.addTab(tabSpec,fragments[i],null);
         }
 
@@ -62,7 +61,7 @@ public class HnActivity extends BaseActivity {
             @Override
             public void onTabChanged(String tabId) {
 
-                Toast.makeText(context,tabId+"被选中了",Toast.LENGTH_SHORT).show();
+               // Toast.makeText(context,tabId+"被选中了",Toast.LENGTH_SHORT).show();
             }
         });
     }

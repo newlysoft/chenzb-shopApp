@@ -53,6 +53,8 @@ public class CategoryItemActivity extends AppCompatActivity {
                 finish();
             }
         });
+        //adapter设置点击事件
+
     }
 
 }

@@ -31,7 +31,7 @@ public class MainActivity extends BaseActivity {
     private EditText etContent;
     private Button btnStartAct;
     private Button btnSend;
-    private Button btnHttp = null;
+    private Button btnFragTabHost = null;
     private Button btnOneKeyShare = null;
     private LinearLayout llAdvertiseBoard;
     private LayoutInflater inflater;
@@ -40,7 +40,7 @@ public class MainActivity extends BaseActivity {
 
     private RoundImageView roundImageView;
 
-    private String picUrl = "http://pic1.ooopic.com/uploadfilepic/sheji/2010-01-12/OOOPIC_1982zpwang407_20100112ae3851a13c83b1c4.jpg";
+    private String picUrl = "http://img3.imgtn.bdimg.com/it/u=1282947565,1111767110&fm=26&gp=0.jpg";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +51,7 @@ public class MainActivity extends BaseActivity {
         etContent = (EditText) findViewById(R.id.etContent);
         btnSend = (Button) findViewById(R.id.btnSend);
         btnStartAct = (Button) findViewById(R.id.btnStartAct);
-        btnHttp = (Button) findViewById(R.id.btnHttpAct);
+        btnFragTabHost= (Button) findViewById(R.id.btnFragTabHost);
         btnOneKeyShare = (Button) this.findViewById(R.id.btnOneKeyShare);
         llAdvertiseBoard = (LinearLayout) findViewById(R.id.llAdvertiseBoard);
         mRoundedImageView = (CircleImageView) findViewById(R.id.mRoundImageView);
@@ -59,7 +59,6 @@ public class MainActivity extends BaseActivity {
         roundImageView.setRectAdius(20.0f);
         GlideUtils.GlideLoadImage(this, mRoundedImageView, picUrl);
         // FrescoUtils.frescoLoadImage(picUrl,mRoundedImageView);
-
         inflater = LayoutInflater.from(this);
         //step2:jsonArray方式添加图片的Url地址
         advertiseArray = new JSONArray();
@@ -95,7 +94,7 @@ public class MainActivity extends BaseActivity {
         //第三步发送广播
         btnSend.setOnClickListener(listener);
         btnStartAct.setOnClickListener(listener);
-        btnHttp.setOnClickListener(listener);
+        btnFragTabHost.setOnClickListener(listener);
         btnOneKeyShare.setOnClickListener(listener);
         //发送广播
     }
@@ -120,7 +119,7 @@ public class MainActivity extends BaseActivity {
                     openActivity(context,HomeActivity.class);
                     finish();
                     break;
-                case R.id.btnHttpAct://进入http测试界面
+                case R.id.btnFragTabHost://进入http测试界面
                     openActivity(context,HnActivity.class);
                     break;
                 case R.id.btnOneKeyShare:

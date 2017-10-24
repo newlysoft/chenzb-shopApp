@@ -1,5 +1,6 @@
 package com.example.administrator.myapp.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -10,11 +11,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.administrator.myapp.R;
 import com.example.administrator.myapp.adapter.HomeProductListAdapter;
 import com.example.administrator.myapp.base.BaseFragment;
 import com.example.administrator.myapp.divider.RecycleViewDivider;
+import com.example.administrator.myapp.ui.PayActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -100,6 +103,16 @@ public class HomeProductFragment extends BaseFragment {
             stringList.add("数据"+i);
         }
         mAdapter.setData(stringList);
+        mAdapter.setOnItemClickListener(new HomeProductListAdapter.OnItemClickListener() {
+            @Override
+            public void onItemMethod() {
+
+
+                Toast.makeText(context,"发起模拟支付",Toast.LENGTH_SHORT).show();
+                //点击进入支付页面
+                startActivity(new Intent(context, PayActivity.class));
+            }
+        });
     }
 
 }

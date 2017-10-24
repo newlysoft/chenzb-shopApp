@@ -6,7 +6,7 @@ buildscript {
         mavenCentral() // jcenter() works as well because it pulls from Maven Central
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.0'
+        classpath 'com.android.tools.build:gradle:2.3.3'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -20,8 +20,8 @@ allprojects {
 }
 
 ext{
-    compileSdkVersion = 24 //编译 sdk version
-    buildToolsVersion = "24.0.3"
+    compileSdkVersion = 25 //编译 sdk version
+    buildToolsVersion = "25.0.0"
     targetSdkVersion = 23
     support_name = "24.2.1"
     min_sdk= 16

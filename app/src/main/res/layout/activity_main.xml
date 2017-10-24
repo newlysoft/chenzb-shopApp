@@ -38,7 +38,7 @@
         android:text="@string/btnStatAct" />
 
     <Button
-        android:id="@+id/btnHttpAct"
+        android:id="@+id/btnFragTabHost"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnStartAct"
@@ -48,7 +48,7 @@
         android:id="@+id/btnOneKeyShare"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnHttpAct"
+        android:layout_below="@+id/btnFragTabHost"
         android:gravity="center"
         android:text="一键分享功能" />
     <!--圆形图片-->

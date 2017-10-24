@@ -89,7 +89,7 @@ public class HomeActivity extends BaseActivity {
         mFragmentTransaction.add(R.id.mContainer, mMeFragment, ME_TAG);//添加我的
         mFragmentTransaction.commit();
         //step3显示指定的fragment
-        showF(mHomeFragment);//显示第一个fragment
+        showFrag(mHomeFragment);//显示第一个fragment
         mTabs = (RadioGroup) findViewById(R.id.tabcontainer);
         mTabs.check(R.id.tabhome);//绑定第一个
         mTabs.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -98,16 +98,16 @@ public class HomeActivity extends BaseActivity {
                 switch (checkedId) {
                     case R.id.tabhome:
                         //根据按钮的监听加载响应的页面
-                        showF(mHomeFragment);
+                        showFrag(mHomeFragment);
                         break;
                     case R.id.tabCategory:
-                        showF(mCategoryFragment);
+                        showFrag(mCategoryFragment);
                         break;
                     case R.id.tab_shopcart:
-                        showF(mShopCartFragment);
+                        showFrag(mShopCartFragment);
                         break;
                     case R.id.tabme:
-                        showF(mMeFragment);
+                        showFrag(mMeFragment);
                         break;
                 }
             }
@@ -119,7 +119,7 @@ public class HomeActivity extends BaseActivity {
         }else {
             if (showCartPage.equals(Constant.SHOW_CART_VALUE)){
                 //切换到购物车界面
-                showF(mShopCartFragment);
+                showFrag(mShopCartFragment);
                 //第三个tab被选中
                 mTabs.check(R.id.tab_shopcart);
             }
@@ -142,7 +142,7 @@ public class HomeActivity extends BaseActivity {
     /**
      * 显示Fragment
      */
-    public void showF(Fragment fragment) {
+    public void showFrag(Fragment fragment) {
         hiddenFragment();//这个方法是隐藏所有的fragment
         FragmentTransaction mTransaction = mFragmentManager.beginTransaction();
         mTransaction.show(fragment);//显示你要显示的fragment

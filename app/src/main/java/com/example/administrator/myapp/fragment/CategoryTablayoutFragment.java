@@ -1,5 +1,6 @@
 package com.example.administrator.myapp.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -13,9 +14,11 @@ import android.view.ViewGroup;
 import com.example.administrator.myapp.R;
 import com.example.administrator.myapp.adapter.CategoryRecyclerViewAdapter;
 import com.example.administrator.myapp.base.BaseFragment;
+import com.example.administrator.myapp.ui.PayActivity;
 
 /**
  * Created by Administrator on 2017/2/15.
+ *  tablayout的fragment
  */
 
 public class CategoryTablayoutFragment extends BaseFragment {
@@ -61,6 +64,19 @@ public class CategoryTablayoutFragment extends BaseFragment {
         GridLayoutManager gridLayoutManager=new GridLayoutManager(context,4, LinearLayoutManager.VERTICAL,false);
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
         mRecyclerView.setLayoutManager(gridLayoutManager);
-        mRecyclerView.setAdapter(new CategoryRecyclerViewAdapter(context));
+        CategoryRecyclerViewAdapter categoryRecyclerViewAdapter=new CategoryRecyclerViewAdapter(context);
+        mRecyclerView.setAdapter(categoryRecyclerViewAdapter);
+        //设置点击事件
+        categoryRecyclerViewAdapter.setOnItemClickListener(new CategoryRecyclerViewAdapter.OnItemClickListener() {
+            @Override
+            public void onItemSelectde() {
+                //Toast.makeText(context,"点击了",Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(context, PayActivity.class);
+                startActivity(intent);//跳转到支付的act界面进行支付
+
+
+            }
+        });
+
     }
 }

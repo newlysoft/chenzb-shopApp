@@ -67,7 +67,7 @@ public class ShopCartFragment extends BaseFragment implements View.OnClickListen
                Toast.makeText(getActivity(),"iv 被点击了",Toast.LENGTH_SHORT).show();
                if (context instanceof HomeActivity){
                    HomeActivity mActivity= (HomeActivity)context;
-                   mActivity.showF(new HomeFragment());
+                   mActivity.showFrag(new HomeFragment());
                    mActivity.mTabs.check(R.id.tabhome);
                }
                 break;

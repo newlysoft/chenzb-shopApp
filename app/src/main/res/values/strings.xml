@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">装逼商城</string>
+    <string name="app_name">装逼干货商城</string>
     <string name="sendReceiver">发送广播</string>
     <string name="btnStatAct">进入主页面</string>
     <string name="etHintContent">请输入你要发送的广播内容</string>

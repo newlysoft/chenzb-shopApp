@@ -39,6 +39,18 @@ public class CategoryRecyclerViewAdapter extends RecyclerView.Adapter<CategoryRe
         //加载网络图片
         GlideUtils.GlideLoadImage(context,holder.imageView,imgUrl);
         holder.tvName.setText("衣服");
+        //item点击事件
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //点击触发
+                if(mOnItemClickListener!=null){
+                    //触发回调函数
+                    mOnItemClickListener.onItemSelectde();
+                }
+            }
+        });
     }
 
     @Override
@@ -59,5 +71,18 @@ public class CategoryRecyclerViewAdapter extends RecyclerView.Adapter<CategoryRe
             imageView= (ImageView) itemView.findViewById(R.id.itemImgView);
             tvName= (TextView) itemView.findViewById(R.id.itemTvName);
         }
+    }
+
+    public OnItemClickListener mOnItemClickListener=null;
+
+    //
+    public interface OnItemClickListener{
+
+        void onItemSelectde();
+    }
+
+
+    public void  setOnItemClickListener(OnItemClickListener mOnItemClickListener){
+        this.mOnItemClickListener=mOnItemClickListener;
     }
 }
